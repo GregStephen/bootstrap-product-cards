@@ -68,7 +68,7 @@ const domStringBuilder = (array) => {
     let domString = '';
     array.forEach(product => {
         domString += `<div class="col-4">`
-        domString += `<div class="card">`
+        domString +=    `<div class="card">`
         domString +=        `<div class="card-header">${product.title}</div>`
         domString +=        `<img src="${product.imageUrl}" class="card-img-top" alt="...">`
         domString +=        `<div class="card-body">`
@@ -83,7 +83,7 @@ const domStringBuilder = (array) => {
         domString +=            `<h6>100-200: ${product.price2}</h6>`
         domString +=            `<h6>200+: ${product.price3}</h6>`
         domString +=        `</div>`
-        domString += `</div>`
+        domString +=    `</div>`
         domString += `</div>`
     });
     printToDom("titleDiv", domString);
