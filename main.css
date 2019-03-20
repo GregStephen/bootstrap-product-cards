@@ -5,3 +5,25 @@ body {
 h1 {
     text-decoration: underline;
 }
+
+.card {
+    box-shadow: 5px 5px 8px grey;
+    margin-bottom: 2em;
+}
+.card-header{
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+.card-header, .card-text{
+    text-align: center
+}
+
+.availability {
+    background-color: grey;
+    padding-left: .5em;
+    color: yellow;
+    width: 100%;
+}
+footer {
+    font-size: .75em;
+}
