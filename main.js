@@ -66,17 +66,23 @@ const printToDom = (divId, textToPrint) => {
 
 const domStringBuilder = (array) => {
     let domString = '';
-    for(let i = 0; i < array.length; i++){
-        domString += `<div class="card" style="width: 18rem;">`
-        domString += `<div class="card-header">${array[i].title}</div>`
-        domString +=    `<img src="${array[i].imageUrl}" class="card-img-top" alt="...">`
+    array.forEach(product => {
+        domString += `<div class="card col-4">`
+        domString += `<div class="card-header">${product.title}</div>`
+        domString +=    `<img src="${product.imageUrl}" class="card-img-top" alt="...">`
         domString +=    `<div class="card-body">`
-        domString +=    `<p class="card-text">${array[i].description}</p>`
-        domString += 
+        domString +=    `<p class="card-text">${product.description}</p>`
+        domString +=    `<h4>Size</h4>`
+        domString +=    `<h6>${product.size}</h6>`
+        domString +=    `<h6>${product.weight}</h6>`
+        domString +=    `<footer>Valid until ${product.validUntil}</footer>`
+        domString +=    `<h4>Price</h4>`
+        domString +=    `<h6>${product.price1}</h6>`
+        domString +=    `<h6>${product.price2}</h6>`
+        domString +=    `<h6>${product.price3}</h6>`
         domString +=    `</div>`
         domString += `</div>`
-        domString += `</div>`
-    }
+    });
     printToDom("titleDiv", domString);
 }
 
